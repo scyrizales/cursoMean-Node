@@ -1,5 +1,5 @@
 # cursoMean-Node
 
-ejecutar
+luego de descargar ejecutar
 
     npm install
