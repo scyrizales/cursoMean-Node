@@ -6,6 +6,6 @@ var send = gmailSender({
   to: 'edex19@gmail.com',
   subject: 'pruba npm gmail send',
   text: 'envio desde node'
-})
+});
 
 send();
