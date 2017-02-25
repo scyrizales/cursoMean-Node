@@ -10,6 +10,13 @@ function router(req, res) {
       res.write(file);
       res.end();
       break;
+    case '/calculos/convertirDolaresASoles':
+    // usamos clases para poder variar los valores de las variables iniciales
+      var calculos = require('./calculos');
+      calculos.usdToPen = 4.21;
+      calculos.convertirDolaresASoles(urlObj, res);
+      console.log(calculos.usdToPen);
+      break;
     default:
       var datosUrl = urlObj.pathname.split("/");
       console.log(datosUrl);
