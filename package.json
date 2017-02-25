@@ -1,0 +1,27 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "proyecto inicial en node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scyrizales/cursoMean-Node.git"
+  },
+  "keywords": [
+    "node",
+    "inicial",
+    "curso"
+  ],
+  "author": "Sergio Castillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scyrizales/cursoMean-Node/issues"
+  },
+  "homepage": "https://github.com/scyrizales/cursoMean-Node#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
