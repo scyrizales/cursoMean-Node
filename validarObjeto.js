@@ -1,16 +1,25 @@
 var _ = require('lodash');
 var rl = require('readline').createInterface(process.stdin, process.stdout);
 
-rl.setPrompt("Ingresa objeto\n");
-rl.prompt();
+function pedirObjeto() {
+  rl.setPrompt("Ingresa objeto\n");
+  rl.prompt();
+}
+pedirObjeto();
 
 rl.on('line', function (line) {
   if (line === 'exit') {
     rl.close();
   } else {
-    console.log(_.isEmpty(JSON.parse(line)));
-    rl.setPrompt("Ingresa objeto\n");
-    rl.prompt();
+    var json;
+    try {
+      json = JSON.parse(line);
+      var estaVacio = _.isEmpty(json);
+      console.log("el objeto esta " + (estaVacio ? "vacio" : "lleno"));
+    } catch (ex) {
+      console.log("el json no es valido");
+    }
+    pedirObjeto();
   }
 }).on('close',function () {
   console.log('Bye');
