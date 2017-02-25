@@ -4,6 +4,13 @@ rl.setPrompt("Ingresa tu nombre\n");
 rl.prompt();
 
 rl.on('line', function (line) {
-  console.log('hola ' + line);
-  rl.close();
-})
+  if (line === 'exit') {
+    rl.close();
+  } else {
+    console.log('hola ' + line);
+    rl.setPrompt("Ingresa tu nombre\n");
+    rl.prompt();
+  }
+}).on('close',function () {
+  console.log('Bye');
+});
