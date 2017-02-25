@@ -14,3 +14,7 @@ rl.on('line', function (line) {
 }).on('close',function () {
   console.log('Bye');
 });
+
+process.on('exit', function () {
+  console.log("Me cerraron");
+})
